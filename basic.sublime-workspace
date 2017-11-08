@@ -1,0 +1,520 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"m_scree",
+				"m_screen_height"
+			],
+			[
+				"pro",
+				"projectile_prefab"
+			],
+			[
+				"pre",
+				"prefab.name"
+			],
+			[
+				"clear",
+				"Array.Clear()"
+			],
+			[
+				"Vector",
+				"Vector3"
+			],
+			[
+				"Colli",
+				"Collider2D"
+			],
+			[
+				"OnTriggerEnter",
+				"Collider2D.OnTriggerEnter2D(other)"
+			],
+			[
+				"fli",
+				"flight_speed"
+			],
+			[
+				"getcompontn",
+				"Component.GetComponent<T>()"
+			],
+			[
+				"time",
+				"Time.time"
+			],
+			[
+				"close",
+				"closest_enemy"
+			],
+			[
+				"instanceid",
+				"Object.GetInstanceID()"
+			],
+			[
+				"gameo",
+				"GameObject"
+			],
+			[
+				"FindGam",
+				"GameObject.FindGameObjectsWithTag(tag)"
+			],
+			[
+				"Mono",
+				"MonoBehaviour"
+			],
+			[
+				"vec",
+				"Vector3"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"loa",
+				"load_spritesheet\tbool load_spritesheet(const std::string &path, int sprite_width, int sprite_height)"
+			],
+			[
+				"m_c",
+				"m_centered"
+			],
+			[
+				"vector",
+				"Vector2D"
+			],
+			[
+				"ro",
+				"roguelikeSheet_transparent"
+			],
+			[
+				"off",
+				"offset_x"
+			],
+			[
+				"Vec",
+				"Vector2D"
+			],
+			[
+				"image",
+				"images_train"
+			],
+			[
+				"inp",
+				"input_shape"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"ar",
+				"args"
+			],
+			[
+				"arg",
+				"argc"
+			],
+			[
+				"diff",
+				"diff_ms"
+			],
+			[
+				"updae",
+				"update_keys"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "packa",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"add r",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 488.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/martin/xpanse",
+		"/home/martin/xpanse/src",
+		"/home/martin/xpanse/src/engine",
+		"/home/martin/xpanse/src/game",
+		"/home/martin/xpanse/src/tests"
+	],
+	"file_history":
+	[
+		"/home/martin/roguelike/makefile",
+		"/home/martin/xpanse/src/game/main.cxx",
+		"/home/martin/xpanse/CMakeLists.txt",
+		"/home/martin/xpanse/src/tests/main.cxx",
+		"/home/martin/xpanse/Makefile",
+		"/home/martin/xpanse/src/engine/example.cxx",
+		"/home/martin/xpanse/Abuildtest.sh",
+		"/home/martin/xpanse/buildntest.sh",
+		"/home/martin/xpanse/src/engine/example.cpp",
+		"/home/martin/xpanse/src/tests/main.cpp",
+		"/home/martin/xpanse/src/engine/example.hpp",
+		"/home/martin/xpanse/src/game/main.cpp",
+		"/home/martin/xpanse/makefile",
+		"/home/martin/Makefile",
+		"/home/martin/xpanse/make",
+		"/home/martin/sdl-lin/engine/src/gameobject.cpp",
+		"/home/martin/sdl-lin/engine/src/interactioncomponent.hpp",
+		"/home/martin/sdl-lin/engine/src/player.cpp",
+		"/home/martin/sdl-lin/engine/src/staticobject.hpp",
+		"/home/martin/sdl-lin/engine/src/staticobject.cpp",
+		"/home/martin/sdl-lin/engine/src/engine.cpp",
+		"/home/martin/sdl-lin/engine/src/engine.hpp",
+		"/home/martin/sdl-lin/engine/src/interactioncomponent.cpp",
+		"/home/martin/sdl-lin/engine/src/action.hpp",
+		"/home/martin/sdl-lin/engine/src/event.hpp",
+		"/home/martin/sdl-lin/engine/src/event.cpp",
+		"/home/martin/sdl-lin/engine/src/action.cpp",
+		"/home/martin/sdl-lin/engine/src/ui_button.hpp",
+		"/home/martin/sdl-lin/engine/src/ui_button.cpp",
+		"/home/martin/sdl-lin/engine/src/world.hpp",
+		"/home/martin/sdl-lin/engine/src/gameobject.hpp",
+		"/home/martin/sdl-lin/engine/src/graphicsmanager.cpp",
+		"/home/martin/sdl-lin/engine/src/graphicsmanager.hpp",
+		"/home/martin/sdl-lin/engine/src/world.cpp",
+		"/home/martin/sdl-lin/engine/src/npc.hpp",
+		"/home/martin/sdl-lin/engine/src/npc.cpp",
+		"/home/martin/sdl-lin/engine/src/collider.hpp",
+		"/home/martin/sdl-lin/exp/src/component.hpp",
+		"/home/martin/sdl-lin/exp/src/main.cpp",
+		"/home/martin/sdl-lin/engine/src/editorengine.cpp",
+		"/home/martin/sdl-lin/engine/src/editorengine.hpp",
+		"/home/martin/sdl-lin/engine/src/player.hpp",
+		"/home/martin/sdl-lin/engine/src/old/actor.cpp",
+		"/home/martin/sdl-lin/engine/src/old/engine.cpp",
+		"/home/martin/sdl-lin/engine/src/old/gameobject.hpp",
+		"/home/martin/sdl-lin/engine/src/old/main.cpp",
+		"/home/martin/sdl-lin/engine/src/old/mainclass_old.cpp",
+		"/home/martin/sdl-lin/engine/src/old/npc.cpp",
+		"/home/martin/sdl-lin/engine/src/old/player.cpp",
+		"/home/martin/sdl-lin/engine/makefile",
+		"/home/martin/sdl-lin/engine/src/helpers.cpp",
+		"/home/martin/sdl-lin/engine/src/editorwindow.cpp",
+		"/home/martin/sdl-lin/engine/src/editorwindow.hpp",
+		"/home/martin/sdl-lin/exp/makefile",
+		"/home/martin/sdl-lin/engine/src/mainclass.hpp",
+		"/home/martin/sdl-lin/engine/src/old/actor.hpp",
+		"/home/martin/sdl-lin/engine/src/old/engine.hpp",
+		"/home/martin/sdl-lin/engine/src/old/gameobject.cpp",
+		"/home/martin/sdl-lin/engine/src/old/mainclass_old.hpp",
+		"/home/martin/sdl-lin/engine/src/old/npc.hpp",
+		"/home/martin/sdl-lin/engine/src/old/player.hpp",
+		"/home/martin/sdl-lin/engine/src/mainclass.cpp",
+		"/home/martin/sdl-lin/libexp/lib.cpp",
+		"/home/martin/sdl-lin/libexp/lib.hpp",
+		"/home/martin/sdl-lin/mainexp/main.cpp",
+		"/home/martin/sdl-lin/n/main.cpp",
+		"/home/martin/sdl-lin/engine/build/main.so",
+		"/home/martin/dllexp/mylib.cpp",
+		"/home/martin/dllexp/main.cpp",
+		"/home/martin/sdl-lin/makefile",
+		"/home/martin/unity/RogueLike/Assets/Scripts/Sc2dColliderRaycast.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScMovementStatics.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScTurretStatics.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScTurretAim.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScProjectiletMovement.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScTurretFire.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScRaycastProjectile.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScRemoveAfterRender.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScAssetManager.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScGameManager.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScSpawnPoint.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScAssetGenerator.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScDeath.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScProjectileDamage.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScHitpoints.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScEnemy.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScWaypoint.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScEnemyWalk.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScWorld.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScStaticAssetManager.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScTurretFireBullet.cs",
+		"/home/martin/unity/RogueLike/Assets/ScProjectileDamage.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScBulletMovement.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScBullet.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScPlayerController.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScTile.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/scGameobjectHelpers.cs",
+		"/home/martin/unity/RogueLike/Assets/Scripts/scPlayer.cs",
+		"/home/martin/roguelike/media/roguelike-cave-pack/Facebook.url",
+		"/home/martin/.config/sublime-text-3/Packages/EasyClangComplete/Preferences.sublime-settings",
+		"/home/martin/.config/sublime-text-3/Packages/EasyClangComplete/easy_clang_complete.sublime-project",
+		"/home/martin/.config/sublime-text-3/Packages/EasyClangComplete/EasyClangComplete.sublime-settings",
+		"/home/martin/roguelike/src/gameobject.hpp",
+		"/home/martin/roguelike/src/gameobject.cpp",
+		"/home/martin/roguelike/src/visualcomponent.hpp",
+		"/home/martin/roguelike/src/visualcomponent.cpp",
+		"/home/martin/roguelike/src/spritesheet.cpp",
+		"/home/martin/roguelike/src/texture.cpp",
+		"/home/martin/roguelike/src/keymanager.hpp",
+		"/home/martin/roguelike/src/graphicsmanager.cpp",
+		"/home/martin/roguelike/src/spritesheet.hpp",
+		"/home/martin/roguelike/src/mainclass.cpp",
+		"/home/martin/roguelike/src/mainclass.hpp",
+		"/home/martin/roguelike/src/player.hpp",
+		"/home/martin/roguelike/src/player.cpp",
+		"/home/martin/roguelike/src/npc.hpp",
+		"/home/martin/roguelike/src/graphicsmanager.hpp",
+		"/home/martin/roguelike/src/main.cpp",
+		"/home/martin/roguelike/src/vector2d.hpp",
+		"/home/martin/roguelike/src/vector2d.cpp",
+		"/home/martin/roguelike/src/old/floortile.hpp",
+		"/home/martin/roguelike/src/texture.hpp",
+		"/home/martin/roguelike/src/vector3d.hpp",
+		"/home/martin/roguelike/src/vector3d.cpp",
+		"/home/martin/roguelike/src/collider.cpp",
+		"/home/martin/unity/2dPlatformerBase/brahamastra.sublime-project",
+		"/home/martin/unity/2dPlatformerBase/Assets/scripts/ScGameObject.cs",
+		"/home/martin/unity/2dPlatformerBase/"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/home/martin/sdl-lin/engine/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"m_main",
+			"world_posi",
+			"m_event",
+			"m_screen_wi",
+			"m_init_ok",
+			"m_sdl_even",
+			"mainclass.hpp",
+			"Mainclass",
+			"use",
+			"get_sprite",
+			"\nbool Vector3D::operator<(const Vector3D & other){\n\treturn x > other.x; \n}\n",
+			"y()",
+			"x()",
+			"z()",
+			"y()",
+			"x()",
+			"()",
+			"x()",
+			"z()",
+			"y()",
+			"x()",
+			"float",
+			"y()",
+			"x()",
+			"z()",
+			"y()",
+			"x()",
+			"m_z",
+			"m_y",
+			"m_x",
+			"float",
+			"0",
+			"x",
+			"Editor",
+			"Gameobject",
+			"Position",
+			"post_up",
+			"KeyManager",
+			"m_mainclass->keymanager()",
+			"keymanager",
+			"m_main_event",
+			"keymanager"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"engine.hpp",
+			"Engine",
+			"y",
+			"x",
+			"z",
+			"y",
+			"x",
+			"z",
+			"y",
+			"x",
+			"int",
+			"y",
+			"x",
+			"z",
+			"y",
+			"x",
+			"z",
+			"y",
+			"x",
+			"int",
+			"",
+			"int",
+			"EditorEngine",
+			"images",
+			"EditorEngine",
+			"GameObject",
+			"Vector3D",
+			"KeyManager::",
+			"KeyManager"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "basic.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 228.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
