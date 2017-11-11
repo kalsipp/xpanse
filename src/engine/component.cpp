@@ -1,3 +1,6 @@
 #include "component.hpp"
 
-void Component::update(const GameObject & user){}
+
+bool & Component::enabled(){
+	return m_enabled;
+}

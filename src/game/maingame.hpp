@@ -8,7 +8,6 @@ public:
 	static void mainloop();
 	static void teardown();
 private:
-	static bool m_running;
 	static bool m_initialized;
 	MainGame();
 };

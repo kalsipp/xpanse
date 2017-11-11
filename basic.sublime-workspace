@@ -4,6 +4,138 @@
 		"selected_items":
 		[
 			[
+				"G",
+				"GAMEOBJECT_ID\t(engine.hpp)"
+			],
+			[
+				"engine",
+				"engine.hpp\t(engine_test_spawnobject.hpp)"
+			],
+			[
+				"Test_",
+				"Test_DestroyObject\t(engine_test_spawnobject.cpp)"
+			],
+			[
+				"Test",
+				"Test_DestroyObject\t(engine_test_destroyobject.hpp)"
+			],
+			[
+				"eni",
+				"engine_test_spawnobject.hpp\t(engine_test_spawnobject.cpp)"
+			],
+			[
+				"m_ke",
+				"m_key_states"
+			],
+			[
+				"In",
+				"InputManager"
+			],
+			[
+				"m_ga",
+				"m_gameobjects"
+			],
+			[
+				"m_game",
+				"m_gameobjects_to_remove"
+			],
+			[
+				"m_mai",
+				"m_main_renderer"
+			],
+			[
+				"Sp",
+				"SpriteComponent"
+			],
+			[
+				"new_",
+				"new_text"
+			],
+			[
+				"vecto",
+				"vector2d.hpp\t(sprite.hpp)"
+			],
+			[
+				"vect",
+				"vector2d.hpp\t(sprite.hpp)"
+			],
+			[
+				"gameo",
+				"gameobject.hpp\t(engine.hpp)"
+			],
+			[
+				"vec",
+				"vector2d.hpp\t(sprite.hpp)"
+			],
+			[
+				"upd",
+				"update\t(engine.hpp)"
+			],
+			[
+				"game",
+				"m_gameobjects"
+			],
+			[
+				"Vec",
+				"Vector3D"
+			],
+			[
+				"Vector",
+				"Vector2D\t(sprite.hpp)"
+			],
+			[
+				"Vecto",
+				"Vector3D\t(vector3d.hpp)"
+			],
+			[
+				"render",
+				"render_texture\t(graphicsmanager.hpp)"
+			],
+			[
+				"engi",
+				"engine.hpp\t(maingame.hpp)"
+			],
+			[
+				"SDL_Render",
+				"SDL_RendererFlip\t(sprite.hpp)"
+			],
+			[
+				"size",
+				"size_y"
+			],
+			[
+				"_size",
+				"_size_y"
+			],
+			[
+				"pri",
+				"private\t(engine.hpp)"
+			],
+			[
+				"SDL2_",
+				"SDL2TTF_INCLUDE_DIRS"
+			],
+			[
+				"m_sc",
+				"m_screen_height\t(graphicsmanager.cpp)"
+			],
+			[
+				"input",
+				"inputmanager.hpp\t(inputmanager.cpp)"
+			],
+			[
+				"set_",
+				"set_key\t(inputmanager.hpp)"
+			],
+			[
+				"rese",
+				"reset_text_input"
+			],
+			[
+				"TEST",
+				"TEST_SRC_DIR"
+			],
+			[
 				"m_scree",
 				"m_screen_height"
 			],
@@ -18,10 +150,6 @@
 			[
 				"clear",
 				"Array.Clear()"
-			],
-			[
-				"Vector",
-				"Vector3"
 			],
 			[
 				"Colli",
@@ -52,20 +180,12 @@
 				"Object.GetInstanceID()"
 			],
 			[
-				"gameo",
-				"GameObject"
-			],
-			[
 				"FindGam",
 				"GameObject.FindGameObjectsWithTag(tag)"
 			],
 			[
 				"Mono",
 				"MonoBehaviour"
-			],
-			[
-				"vec",
-				"Vector3"
 			],
 			[
 				"inc",
@@ -90,10 +210,6 @@
 			[
 				"off",
 				"offset_x"
-			],
-			[
-				"Vec",
-				"Vector2D"
 			],
 			[
 				"image",
@@ -127,6 +243,244 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/engine/engine.hpp",
+			"settings":
+			{
+				"buffer_size": 1105,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/inputmanager.hpp",
+			"settings":
+			{
+				"buffer_size": 900,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/tests/engine_test_spawnobject.hpp",
+			"settings":
+			{
+				"buffer_size": 206,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/tests/main_test.cpp",
+			"settings":
+			{
+				"buffer_size": 16,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#pragma once\n#include <stdlib.h> \n#include <time.h>\n#include \"../engine/gameobject.hpp\"\n#include \"../engine/engine.hpp\"\n\n",
+			"file": "src/tests/engine_test_destroyobject.hpp",
+			"file_size": 248,
+			"file_write_time": 131547673804004459,
+			"settings":
+			{
+				"buffer_size": 121,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "#pragma once"
+			}
+		},
+		{
+			"file": "src/engine/sprite.hpp",
+			"settings":
+			{
+				"buffer_size": 246,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/gameobject.hpp",
+			"settings":
+			{
+				"buffer_size": 370,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/component.hpp",
+			"settings":
+			{
+				"buffer_size": 164,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/graphicsmanager.hpp",
+			"settings":
+			{
+				"buffer_size": 1075,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 29 files for \"virtual\" (case sensitive)\n\n/home/martin/xpanse/src/engine/component.hpp:\n    4  class Component {\n    5  public:\n    6: \tvirtual void update(const GameObject & user);\n    7: \tvirtual ~Component() {} //Empty destructor\n    8  private:\n    9  };\n\n/home/martin/xpanse/src/engine/gameobject.hpp:\n    6  class GameObject {\n    7  public:\n    8: \tvirtual ~GameObject();\n    9: \tvirtual void update();\n   10: \tvirtual void render();\n   11  \tVector3D & position();\n   12  \tconst Vector3D & position() const;\n\n5 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 550,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "Abuildtest.sh",
+			"settings":
+			{
+				"buffer_size": 103,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/spritecomponent.hpp",
+			"settings":
+			{
+				"buffer_size": 499,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/vector3d.cpp",
+			"settings":
+			{
+				"buffer_size": 25,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/gameobject.cpp",
+			"settings":
+			{
+				"buffer_size": 369,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/component.cpp",
+			"settings":
+			{
+				"buffer_size": 153,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/graphicsmanager.cpp",
+			"settings":
+			{
+				"buffer_size": 5250,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/engine.cpp",
+			"settings":
+			{
+				"buffer_size": 3160,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/game/maingame.cpp",
+			"settings":
+			{
+				"buffer_size": 697,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/inputmanager.cpp",
+			"settings":
+			{
+				"buffer_size": 2092,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/tests/engine_test.cpp",
+			"settings":
+			{
+				"buffer_size": 1011,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/tests/engine_test_spawnobject.cpp",
+			"settings":
+			{
+				"buffer_size": 148,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/tests/engine_test_destroyobject.cpp",
+			"settings":
+			{
+				"buffer_size": 209,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/spritecomponent.cpp",
+			"settings":
+			{
+				"buffer_size": 396,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/sprite.cpp",
+			"settings":
+			{
+				"buffer_size": 237,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/rect.hpp",
+			"settings":
+			{
+				"buffer_size": 233,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/engine/rect.cpp",
+			"settings":
+			{
+				"buffer_size": 246,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -135,7 +489,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 375.0,
 		"last_filter": "packa",
 		"selected_items":
 		[
@@ -156,7 +510,7 @@
 				"Package Control: Add Repository"
 			]
 		],
-		"width": 488.0
+		"width": 486.0
 	},
 	"console":
 	{
@@ -177,6 +531,7 @@
 	"expanded_folders":
 	[
 		"/home/martin/xpanse",
+		"/home/martin/xpanse/build",
 		"/home/martin/xpanse/src",
 		"/home/martin/xpanse/src/engine",
 		"/home/martin/xpanse/src/game",
@@ -184,18 +539,62 @@
 	],
 	"file_history":
 	[
+		"/home/martin/xpanse/src/game/spawner.hpp",
+		"/home/martin/xpanse/src/engine/engine.cpp",
+		"/home/martin/xpanse/src/engine/vector3d.cpp",
+		"/home/martin/xpanse/src/engine/spritecomponent.cpp",
+		"/home/martin/xpanse/src/engine/sprite.cpp",
+		"/home/martin/xpanse/src/game/staticobject.cpp",
+		"/home/martin/xpanse/src/engine/rect.cpp",
+		"/home/martin/xpanse/src/engine/vector2d.cpp",
+		"/home/martin/xpanse/src/engine/inputmanager.cpp",
+		"/home/martin/xpanse/src/engine/gameobject.cpp",
+		"/home/martin/xpanse/src/engine/graphicsmanager.cpp",
+		"/home/martin/xpanse/Abuildtest.sh",
+		"/home/martin/xpanse/src/game/main.cpp",
+		"/home/martin/xpanse/src/game/maingame.cpp",
+		"/home/martin/xpanse/src/engine/engine.hpp",
+		"/home/martin/xpanse/src/tests/engine_test.cpp",
+		"/home/martin/xpanse/src/engine/sprite.hpp",
+		"/home/martin/xpanse/src/engine/vector2d.hpp",
+		"/home/martin/xpanse/src/engine/rect.hpp",
+		"/home/martin/xpanse/src/game/maingame.hpp",
+		"/home/martin/xpanse/src/game/staticobject.hpp",
+		"/home/martin/xpanse/src/engine/gameobject.hpp",
+		"/home/martin/xpanse/src/engine/component.hpp",
+		"/home/martin/xpanse/build/CMakeLists.txt",
+		"/home/martin/xpanse/src/engine/spritecomponent.hpp",
+		"/home/martin/xpanse/src/engine/inputmanager.hpp",
+		"/home/martin/xpanse/src/engine/vector3d.hpp",
+		"/home/martin/xpanse/src/engine/component.cpp",
+		"/home/martin/xpanse/src/engine/graphicsmanager.hpp",
+		"/home/martin/xpanse/src/engine/spritecomponent",
+		"/home/martin/xpanse/src/engine/texture.hpp",
+		"/home/martin/xpanse/src/engine/texture.cpp",
+		"/home/martin/xpanse/src/tests/inputmanager_test.cpp",
+		"/home/martin/xpanse/src/tests/graphicsmanager_test.cpp",
+		"/home/martin/effective-robot/src/engine/CMakeLists.txt",
+		"/home/martin/effective-robot/src/game/CMakeLists.txt",
+		"/home/martin/xpanse/src/game/mainloop.hpp",
+		"/home/martin/effective-robot/src/tests/example_test.cpp",
+		"/home/martin/effective-robot/src/game/main.cpp",
+		"/home/martin/effective-robot/CMakeFiles/CMakeOutput.log",
+		"/home/martin/effective-robot/build/CMakeLists.txt",
+		"/home/martin/effective-robot/Abuildtest.sh",
+		"/home/martin/xpanse/src/game/mainloop.cpp",
+		"/home/martin/xpanse/src/tests/main.cpp",
+		"/home/martin/xpanse/CMakeLists.txt",
+		"/home/martin/roguelike/src/graphicsmanager.cpp",
+		"/home/martin/xpanse/src/engine/genericstatic.hpp",
+		"/home/martin/xpanse/src/test_tools/basic_class_test_helpers.cpp",
 		"/home/martin/roguelike/makefile",
 		"/home/martin/xpanse/src/game/main.cxx",
-		"/home/martin/xpanse/CMakeLists.txt",
 		"/home/martin/xpanse/src/tests/main.cxx",
 		"/home/martin/xpanse/Makefile",
 		"/home/martin/xpanse/src/engine/example.cxx",
-		"/home/martin/xpanse/Abuildtest.sh",
 		"/home/martin/xpanse/buildntest.sh",
 		"/home/martin/xpanse/src/engine/example.cpp",
-		"/home/martin/xpanse/src/tests/main.cpp",
 		"/home/martin/xpanse/src/engine/example.hpp",
-		"/home/martin/xpanse/src/game/main.cpp",
 		"/home/martin/xpanse/makefile",
 		"/home/martin/Makefile",
 		"/home/martin/xpanse/make",
@@ -267,61 +666,18 @@
 		"/home/martin/unity/RogueLike/Assets/Scripts/ScSpawnPoint.cs",
 		"/home/martin/unity/RogueLike/Assets/Scripts/ScAssetGenerator.cs",
 		"/home/martin/unity/RogueLike/Assets/Scripts/ScDeath.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScProjectileDamage.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScHitpoints.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScEnemy.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScWaypoint.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScEnemyWalk.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScWorld.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScStaticAssetManager.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScTurretFireBullet.cs",
-		"/home/martin/unity/RogueLike/Assets/ScProjectileDamage.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScBulletMovement.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScBullet.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScPlayerController.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/ScTile.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/scGameobjectHelpers.cs",
-		"/home/martin/unity/RogueLike/Assets/Scripts/scPlayer.cs",
-		"/home/martin/roguelike/media/roguelike-cave-pack/Facebook.url",
-		"/home/martin/.config/sublime-text-3/Packages/EasyClangComplete/Preferences.sublime-settings",
-		"/home/martin/.config/sublime-text-3/Packages/EasyClangComplete/easy_clang_complete.sublime-project",
-		"/home/martin/.config/sublime-text-3/Packages/EasyClangComplete/EasyClangComplete.sublime-settings",
-		"/home/martin/roguelike/src/gameobject.hpp",
-		"/home/martin/roguelike/src/gameobject.cpp",
-		"/home/martin/roguelike/src/visualcomponent.hpp",
-		"/home/martin/roguelike/src/visualcomponent.cpp",
-		"/home/martin/roguelike/src/spritesheet.cpp",
-		"/home/martin/roguelike/src/texture.cpp",
-		"/home/martin/roguelike/src/keymanager.hpp",
-		"/home/martin/roguelike/src/graphicsmanager.cpp",
-		"/home/martin/roguelike/src/spritesheet.hpp",
-		"/home/martin/roguelike/src/mainclass.cpp",
-		"/home/martin/roguelike/src/mainclass.hpp",
-		"/home/martin/roguelike/src/player.hpp",
-		"/home/martin/roguelike/src/player.cpp",
-		"/home/martin/roguelike/src/npc.hpp",
-		"/home/martin/roguelike/src/graphicsmanager.hpp",
-		"/home/martin/roguelike/src/main.cpp",
-		"/home/martin/roguelike/src/vector2d.hpp",
-		"/home/martin/roguelike/src/vector2d.cpp",
-		"/home/martin/roguelike/src/old/floortile.hpp",
-		"/home/martin/roguelike/src/texture.hpp",
-		"/home/martin/roguelike/src/vector3d.hpp",
-		"/home/martin/roguelike/src/vector3d.cpp",
-		"/home/martin/roguelike/src/collider.cpp",
-		"/home/martin/unity/2dPlatformerBase/brahamastra.sublime-project",
-		"/home/martin/unity/2dPlatformerBase/Assets/scripts/ScGameObject.cs",
-		"/home/martin/unity/2dPlatformerBase/"
+		"/home/martin/unity/RogueLike/Assets/Scripts/ScProjectileDamage.cs"
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 68.0
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 188.0,
 		"where_history":
 		[
+			"/home/martin/xpanse/src",
 			"/home/martin/sdl-lin/engine/src"
 		]
 	},
@@ -330,6 +686,15 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"m_key_s",
+			"engine",
+			"virtual",
+			"#",
+			"KeyManager",
+			"MainGame",
+			"Game_src",
+			"Engine_src",
+			"Game_src_dir",
 			"m_main",
 			"world_posi",
 			"m_event",
@@ -379,6 +744,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"InputManager",
+			"GAME_SRC_FILES",
+			"ENGINE_SRC_FILES",
 			"engine.hpp",
 			"Engine",
 			"y",
@@ -418,23 +786,804 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/engine/engine.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								353,
+								353
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/engine/inputmanager.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								834,
+								846
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/tests/engine_test_spawnobject.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/tests/main_test.cpp",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 16,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/tests/engine_test_destroyobject.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 121,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#pragma once",
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/engine/sprite.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								246,
+								246
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/engine/gameobject.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								190,
+								190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/engine/component.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/engine/graphicsmanager.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1075,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								871,
+								871
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 550,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										145,
+										152
+									],
+									[
+										199,
+										206
+									],
+									[
+										365,
+										372
+									],
+									[
+										396,
+										403
+									],
+									[
+										427,
+										434
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Abuildtest.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/engine/spritecomponent.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								370,
+								370
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 7,
 			"sheets":
 			[
+				{
+					"buffer": 12,
+					"file": "src/engine/vector3d.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/engine/gameobject.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								299,
+								299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "src/engine/component.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/engine/graphicsmanager.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								846,
+								846
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "src/engine/engine.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								957,
+								957
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "src/game/maingame.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								367,
+								342
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "src/engine/inputmanager.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2092,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1666,
+								1666
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "src/tests/engine_test.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "src/tests/engine_test_spawnobject.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								70,
+								70
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "src/tests/engine_test_destroyobject.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "src/engine/spritecomponent.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "src/engine/sprite.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								142,
+								142
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "src/engine/rect.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								207,
+								207
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "src/engine/rect.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								116,
+								116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 58.0
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 68.0
 	},
 	"layout":
 	{
@@ -456,7 +1605,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.470241753739,
 			1.0
 		],
 		"rows":
@@ -466,15 +1615,19 @@
 		]
 	},
 	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Packages/Makefile/Make.sublime-build",
 	"project": "basic.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 112.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -504,7 +1657,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -512,7 +1665,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 228.0,
+	"side_bar_width": 279.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

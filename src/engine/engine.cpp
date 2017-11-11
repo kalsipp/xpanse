@@ -1,21 +1,21 @@
 #include "engine.hpp"
-
-
-
-
-
+#include "components/debug_closegamecomponent.hpp"
 bool Engine::m_initialized = false;
 bool Engine::m_running = false;
 std::thread Engine::m_enginethread;
 std::map<GAMEOBJECT_ID, GameObject*> Engine::m_gameobjects;
 GAMEOBJECT_ID Engine::m_latest_gameobject_id = 0;
+std::queue<std::pair<GAMEOBJECT_ID, GameObject*>> Engine::m_gameobjects_to_add;
+std::queue<GAMEOBJECT_ID> Engine::m_gameobjects_to_remove;
 
-
+/* Public routines */
 void Engine::initialize() {
 	assert(!Engine::m_initialized);
 	Engine::m_initialized = true;
 	GraphicsManager::initialize();
 	InputManager::initialize();
+	Engine::add_gameobject<GameObject>().add_component<Debug_CloseGameComponent>();
+
 }
 
 void Engine::teardown() {
@@ -25,33 +25,33 @@ void Engine::teardown() {
 void Engine::start() {
 	assert(Engine::m_initialized);
 	Engine::m_running = true;
-	Engine::m_enginethread =  std::thread(&Engine::update);
+	Engine::update();
 }
 
 void Engine::stop() {
 	Engine::m_running = false;
-	Engine::m_enginethread.join();
 }
 
-GAMEOBJECT_ID Engine::add_gameobject(GameObject * new_object) {
-	Engine::m_gameobjects[Engine::m_latest_gameobject_id] = new_object;
-	GAMEOBJECT_ID id = Engine::m_latest_gameobject_id;
-	if (Engine::m_latest_gameobject_id == std::numeric_limits<int>::max()) {
-		std::cerr << "Warning, gameobject id overflow" << std::endl;
-	}
-	++Engine::m_latest_gameobject_id;
-	return id;
+GameObject * Engine::get_gameobject(const GAMEOBJECT_ID id) {
+	if (!Engine::m_gameobjects.count(id)) return nullptr;
+	return Engine::m_gameobjects[id];
 }
 
-void Engine::remove_gameobject(GAMEOBJECT_ID id) {
-	assert(Engine::m_gameobjects.count(id));
-	delete Engine::m_gameobjects[id];
+void Engine::remove_gameobject(const GAMEOBJECT_ID id) {
 
-	Engine::m_gameobjects.erase(id);
+	Engine::m_gameobjects_to_remove.push(id);
 }
+
+unsigned long Engine::get_gameobject_count() {
+	return Engine::m_gameobjects.size();
+}
+
+/* Private routines*/
 
 void Engine::update() {
 	while (Engine::m_running) {
+		Engine::put_gameobjects_into_world();
+		Engine::remove_gameobject_from_world();
 		InputManager::read_inputs();
 		Engine::update_gameobjects();
 		Engine::render_gameobjects();
@@ -78,16 +78,34 @@ bool compare_gameobjects(const std::pair<GAMEOBJECT_ID, GameObject*>& a, const s
 }
 
 void Engine::sort_gameobjects() {
-	// std::vector<std::pair<K, V>> items;
+	std::vector<std::pair<GAMEOBJECT_ID, GameObject *>> items;
 
-	// //fill items
-	// for(auto i = m_gameobjects.begin(); i != m_gameobjects.end(); ++i){
+	//fill items
+	for (auto i = m_gameobjects.begin(); i != m_gameobjects.end(); ++i) {
+		items.push_back(*i);
+	}
+	//sort by value using std::sort
+	std::sort(items.begin(), items.end(), compare_gameobjects);
 
-	// }
-	// //sort by value using std::sort
-	// std::sort(items.begin(), items.end(), value_comparer);
+	//copy back
+	for (auto i = items.begin(); i != items.end(); ++i) {
+		m_gameobjects[(*i).first] = (*i).second;
+	}
+}
 
-	// //sort by key using std::stable_sort
-	// std::stable_sort(items.begin(), items.end(), key_comparer);
-
+void Engine::put_gameobjects_into_world() {
+	while (!Engine::m_gameobjects_to_add.empty()) {
+		std::pair<GAMEOBJECT_ID, GameObject*> new_item = Engine::m_gameobjects_to_add.front();
+		Engine::m_gameobjects_to_add.pop();
+		Engine::m_gameobjects[new_item.first] = new_item.second;
+	}
+}
+void Engine::remove_gameobject_from_world() {
+	while (!Engine::m_gameobjects_to_remove.empty()) {
+		GAMEOBJECT_ID id = Engine::m_gameobjects_to_remove.front();
+		assert(Engine::m_gameobjects.count(id));
+		Engine::m_gameobjects_to_remove.pop();
+		delete Engine::m_gameobjects[id];
+		Engine::m_gameobjects.erase(id);
+	}
 }

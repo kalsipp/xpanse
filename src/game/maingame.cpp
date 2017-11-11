@@ -1,34 +1,26 @@
 #include "maingame.hpp"
-#include <unistd.h>
 
 bool MainGame::m_initialized = false;
-bool MainGame::m_running = false;
 
 void MainGame::initialize() {
 	if (!MainGame::m_initialized) {
 		MainGame::m_initialized = true;
-		MainGame::m_running = true;
 		Engine::initialize();
 	}
 
-	std::vector<int> ids; 
-	for(uint i = 0; i < 100; ++i){
-		GameObject * g = new StaticObject();
-		ids.push_back(Engine::add_gameobject(g));
+	std::vector<GAMEOBJECT_ID> ids;
+	for (uint i = 0; i < 100; ++i) {
+		GAMEOBJECT_ID id = Engine::add_gameobject<StaticObject>().id();
+		ids.push_back(id);
 	}
-	for(int i = 0; i < 50; ++i){
+	for (int i = 0; i < 50; ++i) {
 		Engine::remove_gameobject(ids[i]);
 	}
 }
 
 void MainGame::mainloop() {
+	assert(MainGame::m_initialized);
 	Engine::start();
-	while (true) {
-		if (InputManager::get_key(SDLK_QUIT)) {
-			Engine::stop();
-			break;
-		}
-	}
 }
 
 void MainGame::teardown() {

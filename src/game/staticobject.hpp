@@ -1,11 +1,10 @@
 #pragma once
 #include "../engine/gameobject.hpp"
-#include "../engine/spritecomponent.hpp"
+#include "../engine/components/spritecomponent.hpp"
 
 class StaticObject:public GameObject {
 public:
-	StaticObject();
+	StaticObject(GAMEOBJECT_ID id);
 	~StaticObject();
-	void render() final override;
 private:
 };

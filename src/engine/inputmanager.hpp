@@ -3,7 +3,9 @@
 #include <map>
 #include <string>
 #include <SDL2/SDL.h>
-
+#include <cstdint>
+#include <iostream>
+#include "basics/timer.hpp"
 /*Defines when the user presses window cross
 Arbitrary value hopefully not occupied by SDL keys
 */
@@ -23,11 +25,11 @@ private:
 	static void reset_text_input();
 	static void set_mouse(bool value);
 	static std::string m_text_input;
-	static std::map<int, bool> m_keys; //Contains state of key
 	static std::map<int, bool> m_keys_static; //Contains if the key was added frame
 	static bool m_initialized;
 	static bool m_mouse_state;
 	static SDL_Event m_sdl_event;
+	static std::map<int, bool> m_keys;
 
 	//Testing only
 	friend void inputmanager_test();

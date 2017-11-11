@@ -1,21 +1,12 @@
 #include "staticobject.hpp"
 
-StaticObject::StaticObject(){
+StaticObject::StaticObject(GAMEOBJECT_ID id):GameObject(id){
 	std::string filename = "./media/stat.png";
-	Component * spritecomp = new SpriteComponent(filename);
-	m_components.push_back(spritecomp);
+	add_component<SpriteComponent>();
+	get_component<SpriteComponent>()->load_sprite_from_image(filename);
 }
 
 StaticObject::~StaticObject(){
 
 }
 
-
-void StaticObject::render(){
-	for(auto i = m_components.begin(); i != m_components.end(); ++i){
-		SpriteComponent * spritecomponent = dynamic_cast<SpriteComponent*>(*i);
-		if(spritecomponent != NULL){
-			(*i)->update(*this);
-		}
-	}
-}

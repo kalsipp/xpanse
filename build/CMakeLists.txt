@@ -19,6 +19,13 @@ set(TEST_OUTPUT_DIR ${PROJECT_BINARY_DIR}/../testBin/)
 file(GLOB ENGINE_SRC_FILES
     ${ENGINE_SRC_DIR}*.hpp
     ${ENGINE_SRC_DIR}*.cpp
+    ${ENGINE_SRC_DIR}components/*.hpp
+    ${ENGINE_SRC_DIR}components/*.cpp    
+    ${ENGINE_SRC_DIR}gameobjects/*.hpp
+    ${ENGINE_SRC_DIR}gameobjects/*.cpp
+    ${ENGINE_SRC_DIR}basics/*.hpp
+    ${ENGINE_SRC_DIR}basics/*.cpp
+
 )
 add_library(${ENGINE_NAME} STATIC ${ENGINE_SRC_FILES})
 target_include_directories (${ENGINE_NAME} PUBLIC ${PROJECT_BINARY_DIR}/../libs)
