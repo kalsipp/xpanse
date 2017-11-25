@@ -5,6 +5,7 @@
 #include "../component.hpp"
 #include "../basics/sprite.hpp"
 #include "../basics/vector2d.hpp"
+#include "../basics/helpers.hpp"
 #include "../gameobject.hpp"
 #include "../graphicsmanager.hpp"
 
@@ -12,6 +13,7 @@ class SpriteComponent: public Component {
 public:
 	SpriteComponent();
 	void load_sprite_from_image(const std::string &);
+	void load_sprite_from_image(const std::string &, const Rect &);
 	void render(GameObject & user) final override;
 private:
 	Sprite m_sprite;

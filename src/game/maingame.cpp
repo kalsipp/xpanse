@@ -6,6 +6,8 @@ void MainGame::initialize() {
 	if (!MainGame::m_initialized) {
 		MainGame::m_initialized = true;
 		Engine::initialize();
+		GraphicsManager::load_texture(DEBUG_SMILEY);
+		GraphicsManager::load_texture(PLAYER_SPRITE_SHEET);
 	}
 
 	std::vector<GAMEOBJECT_ID> ids;
@@ -16,6 +18,9 @@ void MainGame::initialize() {
 	for (int i = 0; i < 50; ++i) {
 		Engine::remove_gameobject(ids[i]);
 	}
+
+
+	Engine::add_gameobject<Player>();
 }
 
 void MainGame::mainloop() {

@@ -43,3 +43,10 @@ GAMEOBJECT_ID GameObject::id()const {
 	return m_id;
 }
 
+void GameObject::move(const Vector3D & movement){
+	m_position+=movement;
+}
+void GameObject::set_position(const Vector3D & position){
+	m_position = position;
+}
+

@@ -47,6 +47,10 @@ set_target_properties(${ENGINE_NAME} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${PROJE
 file(GLOB GAME_SRC_FILES
     ${GAME_SRC_DIR}*.hpp
     ${GAME_SRC_DIR}*.cpp
+    ${GAME_SRC_DIR}components/*.hpp
+    ${GAME_SRC_DIR}components/*.cpp
+    ${GAME_SRC_DIR}gameobjects/*.hpp
+    ${GAME_SRC_DIR}gameobjects/*.cpp
 )
 add_executable(${PROJECT_NAME} ${GAME_SRC_FILES})
 target_link_libraries(${PROJECT_NAME} LINK_PUBLIC Engine) 

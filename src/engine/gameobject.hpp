@@ -10,16 +10,21 @@ public:
 	GameObject(GAMEOBJECT_ID id);
 	~GameObject();
 	bool & enabled();
+
 	template <class component_type>
 	void add_component();
+
 	template <class component_type>
 	component_type * get_component();
+
 	void update();
 	void render();
 	void destroy();
 	Vector3D & position();
 	const Vector3D & position() const;
 	GAMEOBJECT_ID id()const;
+	void move(const Vector3D &);
+	void set_position(const Vector3D &);
 protected:
 	bool m_enabled = true;
 	const GAMEOBJECT_ID m_id;

@@ -103,9 +103,10 @@ void Engine::put_gameobjects_into_world() {
 void Engine::remove_gameobject_from_world() {
 	while (!Engine::m_gameobjects_to_remove.empty()) {
 		GAMEOBJECT_ID id = Engine::m_gameobjects_to_remove.front();
-		assert(Engine::m_gameobjects.count(id));
-		Engine::m_gameobjects_to_remove.pop();
-		delete Engine::m_gameobjects[id];
-		Engine::m_gameobjects.erase(id);
+		if (Engine::m_gameobjects.count(id)) {
+			Engine::m_gameobjects_to_remove.pop();
+			delete Engine::m_gameobjects[id];
+			Engine::m_gameobjects.erase(id);
+		}
 	}
 }
