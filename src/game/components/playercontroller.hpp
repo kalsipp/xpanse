@@ -1,7 +1,7 @@
 #pragma once
 #include "../../engine/component.hpp"
 #include "../../engine/inputmanager.hpp"
-#include "../image_paths.hpp"
+#include "../resource_paths.hpp"
 class PlayerController: public Component {
 public:
 	void update(GameObject & user) final override;

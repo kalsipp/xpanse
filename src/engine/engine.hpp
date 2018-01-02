@@ -1,15 +1,20 @@
 #pragma once
+
+#define NDEBUG
+
+#include "basics/logging.hpp"
+
 #include <thread>
 #include <vector>
 #include <limits>
 #include <queue>
 #include <algorithm>
+#include <typeinfo>
 
 #include "basics/timer.hpp"
 #include "graphicsmanager.hpp"
 #include "inputmanager.hpp"
 
-//
 
 typedef unsigned long GAMEOBJECT_ID;
 #include "gameobject.hpp"
@@ -50,9 +55,10 @@ GameObject & Engine::add_gameobject() {
 	GAMEOBJECT_ID id = Engine::m_latest_gameobject_id;
 	GameObject * new_object = new gameobject_type(id);
 	if (Engine::m_latest_gameobject_id == std::numeric_limits<int>::max()) {
-		std::cerr << "Warning, gameobject id overflow" << std::endl;
+		Logging::log(Logging::WARNING, "Warning, gameobject id overflow");
 	}
 	Engine::m_gameobjects_to_add.push(std::make_pair(id, new_object));
 	++Engine::m_latest_gameobject_id;
+	Logging::log(Logging::INFO, "Added gameobject id " + std::to_string(id) + " type " + typeid(gameobject_type).name());
 	return *new_object;
 }

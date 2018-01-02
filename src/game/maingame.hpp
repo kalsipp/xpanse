@@ -1,9 +1,11 @@
 #pragma once
-#include "../engine/inputmanager.hpp"
 #include "../engine/engine.hpp"
+#include "../engine/inputmanager.hpp"
+#include "../engine/resourcemanager.hpp"
 #include "gameobjects/player.hpp"
-#include "staticobject.hpp"
-#include "image_paths.hpp"
+#include "gameobjects/staticobject.hpp"
+#include "gameobjects/fpscounter.hpp"
+#include "resource_paths.hpp"
 class MainGame {
 public:
 	static void initialize();

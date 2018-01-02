@@ -1,14 +1,19 @@
 #pragma once
-#include <cassert>
+
+
 #include <iostream>
 #include <map>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
+#include "resourcemanager.hpp"
 #include "basics/vector2d.hpp"
 #include "basics/rect.hpp"
 #include "basics/sprite.hpp"
 #include "basics/helpers.hpp"
+#include "basics/logging.hpp"
+
+
 class GraphicsManager {
 public:
 	static void initialize();
@@ -23,15 +28,20 @@ public:
 	static void execute_rendering();
 	static void load_texture(const std::string & path);
 	static SDL_Texture * get_texture(const std::string & filename);
+	static SDL_Texture * get_texture_from_text(const std::string &, TTF_Font*, SDL_Color&);
 private:
+	// static SDL_Surface * load_surface_from_sdl_rwops(SDL_RWops*);
 	static SDL_Surface * load_image_to_surface(const std::string & path);
 	static SDL_Texture * convert_surface_to_texture(SDL_Surface*);
 	GraphicsManager();
 	static bool m_initialized;
 	static std::map<std::string, SDL_Texture*> m_textures;
+	static std::map<std::string, TTF_Font> m_fonts;
 	static SDL_Window * m_main_window;
 	static SDL_Surface * m_main_surface;
 	static SDL_Renderer * m_main_renderer;
+	static SDL_Color render_draw_color;
 	static uint m_screen_width;
 	static uint m_screen_height;
+	static std::string m_window_name;
 };

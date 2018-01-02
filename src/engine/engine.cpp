@@ -1,5 +1,9 @@
 #include "engine.hpp"
+
 #include "components/debug_closegamecomponent.hpp"
+
+
+
 bool Engine::m_initialized = false;
 bool Engine::m_running = false;
 std::thread Engine::m_enginethread;
@@ -8,23 +12,42 @@ GAMEOBJECT_ID Engine::m_latest_gameobject_id = 0;
 std::queue<std::pair<GAMEOBJECT_ID, GameObject*>> Engine::m_gameobjects_to_add;
 std::queue<GAMEOBJECT_ID> Engine::m_gameobjects_to_remove;
 
+
+
+void set_up_logging() {
+	Logging::add_file("logs/everything.log", Logging::TRACE);
+	Logging::add_file("logs/info.log", Logging::INFO);
+	Logging::add_file("logs/warnings.log", Logging::WARNING);
+	Logging::add_file("logs/errors.log", Logging::ERROR);
+	Logging::log(Logging::INFO, "NICE LOGGING");
+}
+
+
+
 /* Public routines */
 void Engine::initialize() {
-	assert(!Engine::m_initialized);
-	Engine::m_initialized = true;
+	ASSERT(!Engine::m_initialized, "You can't initialize engine twice!");
+	set_up_logging();
 	GraphicsManager::initialize();
 	InputManager::initialize();
 	Engine::add_gameobject<GameObject>().add_component<Debug_CloseGameComponent>();
-
+	Engine::m_initialized = true;
+	Logging::log(Logging::INFO, "Finished initialize Engine");
 }
 
 void Engine::teardown() {
 	GraphicsManager::teardown();
+	for(auto it = m_gameobjects.begin(); it != m_gameobjects.end(); ++it){
+		delete (*it).second;
+	}
+	Logging::log(Logging::INFO, "Finished teardown Engine");
+	Logging::teardown();
 }
 
 void Engine::start() {
-	assert(Engine::m_initialized);
+	ASSERT(Engine::m_initialized, "You need to initialize engine first!");
 	Engine::m_running = true;
+	Logging::log(Logging::INFO, "Starting Engine");
 	Engine::update();
 }
 
@@ -40,6 +63,7 @@ GameObject * Engine::get_gameobject(const GAMEOBJECT_ID id) {
 void Engine::remove_gameobject(const GAMEOBJECT_ID id) {
 
 	Engine::m_gameobjects_to_remove.push(id);
+	Logging::log(Logging::TRACE, "Removing gameobject id " + std::to_string(id));
 }
 
 unsigned long Engine::get_gameobject_count() {
@@ -59,6 +83,9 @@ void Engine::update() {
 }
 
 void Engine::update_gameobjects() {
+	for (auto i = Engine::m_gameobjects.begin(); i != Engine::m_gameobjects.end(); ++i) {
+		(*i).second->update_components();
+	}
 	for (auto i = Engine::m_gameobjects.begin(); i != Engine::m_gameobjects.end(); ++i) {
 		(*i).second->update();
 	}

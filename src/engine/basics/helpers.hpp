@@ -4,16 +4,17 @@
 #include <string>
 #include <iostream>
 #include <cassert>
-
+#include "logging.hpp"
 #ifndef NDEBUG
 /* Blessed https://stackoverflow.com/questions/3767869/adding-message-to-assert */
 #   define ASSERT(condition, message) \
     do { \
         if (! (condition)) { \
-            std::cerr << "Assertion: " #condition << std::endl << \
+            Logging::log(Logging::ERROR, std::stringstream() <<std::endl <<  "Assertion: " #condition << std::endl << \
             "Failed in file: " << __FILE__  << std::endl << \
             "line: " << __LINE__ << std::endl << \
-            "Message: " << message << std::endl; \
+            "Message: " << message << std::endl << std::endl); \
+            Logging::teardown();\
             std::terminate(); \
         } \
     } while (false)
@@ -24,6 +25,5 @@
 
 namespace helpers {
 uint random_int(int min, int max);
-void nice_assert(bool, const std::string &);
 std::string get_filename_from_path(const std::string & path);
 }

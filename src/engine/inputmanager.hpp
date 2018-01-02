@@ -6,7 +6,8 @@
 #include <cstdint>
 #include <iostream>
 #include "basics/timer.hpp"
-/*Defines when the user presses window cross
+
+/* Defines when the user presses window cross
 Arbitrary value hopefully not occupied by SDL keys
 */
 #define SDLK_QUIT  9999

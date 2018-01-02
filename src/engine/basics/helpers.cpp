@@ -9,13 +9,6 @@ uint random_int(int min, int max) {
 	return dist(rng);
 }
 
-void nice_assert(bool test, const std::string & info){
-	if(!test){
-		std::cerr << "Error: " << info << std::endl;	
-		assert(test);
-	}
-}
-
 std::string get_filename_from_path(const std::string & path) {
 	std::size_t found = path.find_last_of("/\\");
 	if (found == std::string::npos) {

@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL2/SDL.h>
+#include <iostream>
 #include "vector3d.hpp"
 class Vector3D;
 class Vector2D {

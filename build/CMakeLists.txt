@@ -14,7 +14,7 @@ set(ENGINE_SRC_DIR ${PROJECT_BINARY_DIR}/../src/engine/)
 set(GAME_SRC_DIR ${PROJECT_BINARY_DIR}/../src/game/) 
 set(TEST_SRC_DIR ${PROJECT_BINARY_DIR}/../src/tests/)
 set(TEST_OUTPUT_DIR ${PROJECT_BINARY_DIR}/../testBin/)
-
+set(LIBZIPPP_DIR ${PROJECT_BINARY_DIR}/../external_libs/libzippp)
 #Prepare engine lib
 file(GLOB ENGINE_SRC_FILES
     ${ENGINE_SRC_DIR}*.hpp
@@ -32,12 +32,19 @@ target_include_directories (${ENGINE_NAME} PUBLIC ${PROJECT_BINARY_DIR}/../libs)
 
 INCLUDE(FindPkgConfig)
 
+#g++ -I./lib/libzip-1.3.0/lib -I./src     
+#main.cpp libzippp-master/libzippp.a     
+#libzippp-master/lib/libzip-1.3.0/lib/.libs/libzip.a     
+#libzippp-master/lib/zlib-1.2.11/libz.a
+
 PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2 )
 PKG_SEARCH_MODULE(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
 PKG_SEARCH_MODULE(SDL2TTF REQUIRED SDL2_ttf>=2.0.0)
 
 INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS} ${SDL2TTF_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES(${LIBZIPPP_DIR} ${LIBZIPPP_DIR} ${LIBZIPPP_DIR}/src)
 TARGET_LINK_LIBRARIES(${ENGINE_NAME} dl pthread ${SDL2_LIBRARIES} ${SDL2IMAGE_LIBRARIES} ${SDL2TTF_LIBRARIES})
+TARGET_LINK_LIBRARIES(${ENGINE_NAME} ${LIBZIPPP_DIR}/libzippp.a ${LIBZIPPP_DIR}/lib/libzip-1.3.0/lib/.libs/libzip.a ${LIBZIPPP_DIR}/lib/zlib-1.2.11/libz.a)
 #target_link_libraries(${ENGINE_NAME} SDL2main SDL2 SDL_ttf)
 
 set_target_properties(${ENGINE_NAME} PROPERTIES ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../lib)
@@ -73,3 +80,4 @@ foreach(testSrc ${TEST_SRCS})
                  COMMAND ${TEST_OUTPUT_DIR}${testName} )
 endforeach(testSrc)
     
+

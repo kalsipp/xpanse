@@ -12,7 +12,7 @@ bool & GameObject::enabled() {
 	return m_enabled;
 }
 
-void GameObject::update() {
+void GameObject::update_components() {
 	if (!m_enabled) return;
 	for (auto i = m_components.begin(); i != m_components.end(); ++i) {
 		(*i)->update(*this);
@@ -42,11 +42,13 @@ const Vector3D & GameObject::position()const {
 GAMEOBJECT_ID GameObject::id()const {
 	return m_id;
 }
-
-void GameObject::move(const Vector3D & movement){
-	m_position+=movement;
+std::string GameObject::get_name(){
+	return m_name;
 }
-void GameObject::set_position(const Vector3D & position){
+void GameObject::move(const Vector3D & movement) {
+	m_position += movement;
+}
+void GameObject::set_position(const Vector3D & position) {
 	m_position = position;
 }
 
