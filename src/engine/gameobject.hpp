@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 #include <string>
-
+#include <memory>
 #include "component.hpp"
+#include "components/transform.hpp"
 #include "basics/vector3d.hpp"
 #include "basics/logging.hpp"
 #include "engine.hpp"
@@ -16,47 +17,54 @@ public:
 	bool & enabled();
 
 	template <class component_type>
-	component_type * add_component();
+	std::weak_ptr<component_type> add_component();
 
 	template <class component_type>
-	component_type * get_component();
+	std::weak_ptr<component_type> get_component();
+
+	std::vector<std::shared_ptr<Component>> & get_all_components();
 
 	virtual void update() {}
 	void update_components();
 	void render();
 	void destroy();
-	Vector3D & position();
-	const Vector3D & position() const;
+	Transform & transform();
+	const Transform & transform() const;
 	GAMEOBJECT_ID id()const;
-	void move(const Vector3D &);
-	void set_position(const Vector3D &);
 	std::string get_name();
 protected:
 	bool m_enabled = true;
 	std::string m_name = "NoName";
 	const GAMEOBJECT_ID m_id;
-	std::vector<Component*> m_components;
-	Vector3D m_position;
+	std::vector<std::shared_ptr<Component>> m_components;
+	std::multimap<size_t, std::shared_ptr<Component>> m_component_types;
+	Transform m_transform;
 };
 
 
 template <class component_type>
-component_type * GameObject::add_component() {
-	component_type * new_comp_type = new component_type();
-	Component * new_comp = new_comp_type;
-	m_components.push_back(new_comp);
-	Logging::log(Logging::TRACE, std::stringstream()<<"Adding component " << typeid(component_type).name());
+std::weak_ptr<component_type> GameObject::add_component() {
+	std::shared_ptr<component_type> new_comp_type = std::make_shared<component_type>();
+	m_components.push_back(new_comp_type);
+	m_component_types.insert(std::make_pair(typeid(component_type).hash_code(), new_comp_type));
+	Logging::log(Logging::TRACE, std::stringstream() << "Adding component " << typeid(component_type).name());
 	return new_comp_type;
 }
 
 template <class component_type>
-component_type * GameObject::get_component() {
-	for (auto i = m_components.begin(); i != m_components.end(); ++i) {
-		component_type * component = dynamic_cast<component_type*>(*i);
-		if (component != NULL) {
-			return component;
-		}
+std::weak_ptr<component_type> GameObject::get_component() {
+	auto iter = m_component_types.find(typeid(component_type).hash_code());
+	if(iter != m_component_types.end()){
+		return std::static_pointer_cast<component_type>(iter->second);
+	}else{
+		return std::weak_ptr<component_type>();
 	}
-
-	return nullptr;
+	// for (auto i = m_components.begin(); i != m_components.end(); ++i) {
+	// 	auto downcastedPtr = std::dynamic_pointer_cast<component_type>(*i);
+	// 	if (downcastedPtr)
+	// 	{
+	// 		return downcastedPtr;
+	// 	}
+	// }
+	// return std::weak_ptr<component_type>();
 }

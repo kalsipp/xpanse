@@ -1,15 +1,18 @@
 #include "gameobject.hpp"
 
-GameObject::GameObject(GAMEOBJECT_ID id): m_id(id) {}
+GameObject::GameObject(GAMEOBJECT_ID id): m_id(id){
+}
 
 GameObject::~GameObject() {
-	for (auto i = m_components.begin(); i != m_components.end(); ++i) {
-		delete (*i);
-	}
+	m_components.clear();
 }
 
 bool & GameObject::enabled() {
 	return m_enabled;
+}
+
+std::vector<std::shared_ptr<Component>> & GameObject::get_all_components(){
+	return m_components;
 }
 
 void GameObject::update_components() {
@@ -31,24 +34,16 @@ void GameObject::destroy() {
 	Engine::remove_gameobject(m_id);
 }
 
-Vector3D & GameObject::position() {
-	return m_position;
+Transform & GameObject::transform(){
+	return m_transform;
 }
-
-const Vector3D & GameObject::position()const {
-	return m_position;
+const Transform & GameObject::transform() const{
+	return m_transform;
 }
 
 GAMEOBJECT_ID GameObject::id()const {
 	return m_id;
 }
-std::string GameObject::get_name(){
+std::string GameObject::get_name() {
 	return m_name;
 }
-void GameObject::move(const Vector3D & movement) {
-	m_position += movement;
-}
-void GameObject::set_position(const Vector3D & position) {
-	m_position = position;
-}
-

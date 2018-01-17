@@ -2,9 +2,10 @@
 
 cmake_minimum_required (VERSION 2.6)
 
-set(PROJECT_NAME  Vidya)
+set(GAME_NAME  Vidya)
+set(STRAT_NAME  Funk)
 set(ENGINE_NAME  Engine)
-project (${PROJECT_NAME})
+project (Benis)
 
 SET(GCC_COVERAGE_COMPILE_FLAGS "-std=c++14 -pedantic -g -Wall -Wextra")
 add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
@@ -12,6 +13,7 @@ add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../bin)
 set(ENGINE_SRC_DIR ${PROJECT_BINARY_DIR}/../src/engine/)
 set(GAME_SRC_DIR ${PROJECT_BINARY_DIR}/../src/game/) 
+set(STRAT_SRC_DIR ${PROJECT_BINARY_DIR}/../src/strategy/) 
 set(TEST_SRC_DIR ${PROJECT_BINARY_DIR}/../src/tests/)
 set(TEST_OUTPUT_DIR ${PROJECT_BINARY_DIR}/../testBin/)
 set(LIBZIPPP_DIR ${PROJECT_BINARY_DIR}/../external_libs/libzippp)
@@ -31,11 +33,6 @@ add_library(${ENGINE_NAME} STATIC ${ENGINE_SRC_FILES})
 target_include_directories (${ENGINE_NAME} PUBLIC ${PROJECT_BINARY_DIR}/../libs)
 
 INCLUDE(FindPkgConfig)
-
-#g++ -I./lib/libzip-1.3.0/lib -I./src     
-#main.cpp libzippp-master/libzippp.a     
-#libzippp-master/lib/libzip-1.3.0/lib/.libs/libzip.a     
-#libzippp-master/lib/zlib-1.2.11/libz.a
 
 PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2 )
 PKG_SEARCH_MODULE(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
@@ -59,8 +56,19 @@ file(GLOB GAME_SRC_FILES
     ${GAME_SRC_DIR}gameobjects/*.hpp
     ${GAME_SRC_DIR}gameobjects/*.cpp
 )
-add_executable(${PROJECT_NAME} ${GAME_SRC_FILES})
-target_link_libraries(${PROJECT_NAME} LINK_PUBLIC Engine) 
+add_executable(${GAME_NAME} ${GAME_SRC_FILES})
+target_link_libraries(${GAME_NAME} LINK_PUBLIC Engine) 
+
+file(GLOB STRAT_SRC_FILES
+    ${STRAT_SRC_DIR}*.hpp
+    ${STRAT_SRC_DIR}*.cpp
+    ${STRAT_SRC_DIR}components/*.hpp
+    ${STRAT_SRC_DIR}components/*.cpp
+    ${STRAT_SRC_DIR}gameobjects/*.hpp
+    ${STRAT_SRC_DIR}gameobjects/*.cpp
+)
+add_executable(${STRAT_NAME} ${STRAT_SRC_FILES})
+target_link_libraries(${STRAT_NAME} LINK_PUBLIC Engine) 
 
 
 #Prepare testing

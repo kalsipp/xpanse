@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include "../resources/engine_resource_paths.hpp"
 #include "../component.hpp"
 #include "../basics/sprite.hpp"
 #include "../basics/vector2d.hpp"
@@ -16,7 +17,6 @@ public:
 	void render(GameObject & user) final override;
 private:
 	Sprite m_sprite;
-	Vector2D m_scale;
 	double m_angle = 0;
 	bool m_centered = false;
 	SDL_RendererFlip m_flip = SDL_FLIP_NONE;

@@ -20,7 +20,7 @@ void GraphicsManager::initialize() {
 	       "SDL could not initialize! SDL_Error: " +  std::string(SDL_GetError()));
 	if (!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "0")) // 0 = nearest pixel sampling
 	{
-		std::cout << "Warning: Linear texture filtering not enabled!" << std::endl;
+		Logging::log(Logging::WARNING, std::stringstream()<< "Warning: Linear texture filtering not enabled!");
 	}
 	GraphicsManager::m_main_window = SDL_CreateWindow(
 	                                     GraphicsManager::m_window_name.c_str(),
