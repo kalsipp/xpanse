@@ -4,7 +4,7 @@
 
 class BallComponent:public Component{
 public:
-	void setup(GameObject & user) final override;
+	void setup(std::weak_ptr<GameObject>) final override;
 	void update(GameObject & user) final override;
 private:
 };

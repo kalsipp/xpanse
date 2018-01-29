@@ -34,21 +34,31 @@ public:
 	template <class gameobject_type>
 	static std::weak_ptr<gameobject_type> add_gameobject();
 	template <class gameobject_type>
-	static std::weak_ptr<gameobject_type> get_gameobject(const GAMEOBJECT_ID);
-	static std::weak_ptr<GameObject> get_gameobject(const GAMEOBJECT_ID);
+	static std::weak_ptr<gameobject_type> get_gameobject(const GAMEOBJECT_ID id);
+	static std::weak_ptr<GameObject> get_gameobject(const GAMEOBJECT_ID id);
 	static void remove_gameobject(const GAMEOBJECT_ID id);
 	static unsigned long get_gameobject_count();
+	static void register_scene(const std::string & name,  void (*scenecreator)());
+	static void load_scene(const std::string & name);
 private:
 	Engine();
-	static void update();
+	static void main_loop();
+	static void replace_scene();
 	static void update_gameobjects();
 	static void render_gameobjects();
 	static void sort_gameobjects();
+	static void clear_all_gameobjects();
 
 	/*Actually puts the changes in place*/
 	static void put_gameobjects_into_world();
 	static void remove_gameobject_from_world();
 	static void run_setups(std::vector<std::shared_ptr<GameObject>> & );
+	
+	static std::map<std::string, void(*)()> m_scenes;
+
+	static std::string m_scene_to_load;
+	static bool m_about_to_load_scene;
+
 	static bool m_running;
 	static bool m_initialized;
 	static std::thread m_enginethread;

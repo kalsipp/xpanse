@@ -55,6 +55,9 @@ file(GLOB GAME_SRC_FILES
     ${GAME_SRC_DIR}components/*.cpp
     ${GAME_SRC_DIR}gameobjects/*.hpp
     ${GAME_SRC_DIR}gameobjects/*.cpp
+    ${GAME_SRC_DIR}scenes/*.cpp
+    ${GAME_SRC_DIR}scenes/*.cpp
+
 )
 add_executable(${GAME_NAME} ${GAME_SRC_FILES})
 target_link_libraries(${GAME_NAME} LINK_PUBLIC Engine) 

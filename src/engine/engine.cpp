@@ -3,9 +3,11 @@
 #include "components/debug_closegamecomponent.hpp"
 
 
-
-bool Engine::m_initialized = false;
+std::map<std::string, void(*)()> Engine::m_scenes;
+std::string Engine::m_scene_to_load = "";
+bool Engine::m_about_to_load_scene = false;
 bool Engine::m_running = false;
+bool Engine::m_initialized = false;
 std::thread Engine::m_enginethread;
 std::map<GAMEOBJECT_ID, std::shared_ptr<GameObject>> Engine::m_gameobjects;
 GAMEOBJECT_ID Engine::m_latest_gameobject_id = 0;
@@ -36,19 +38,13 @@ void Engine::initialize() {
 	set_up_logging();
 	GraphicsManager::initialize();
 	InputManager::initialize();
-	auto g = Engine::add_gameobject<GameObject>();
-	g.lock()->add_component<Debug_CloseGameComponent>();
 	Engine::m_initialized = true;
 	Logging::log(Logging::INFO, "Finished initialize Engine");
 }
 
 void Engine::teardown() {
 
-	m_gameobjects.clear();
-
-	//Clear out the queue.
-	std::queue<std::pair<GAMEOBJECT_ID, std::shared_ptr<GameObject>>>().swap(m_gameobjects_to_add);
-
+	clear_all_gameobjects();
 	GraphicsManager::teardown();
 	Logging::log(Logging::INFO, "Finished teardown Engine");
 	Logging::teardown();
@@ -58,7 +54,7 @@ void Engine::start() {
 	ASSERT(Engine::m_initialized, "You need to initialize engine first!");
 	Engine::m_running = true;
 	Logging::log(Logging::INFO, "Starting Engine");
-	Engine::update();
+	Engine::main_loop();
 }
 
 void Engine::stop() {
@@ -80,11 +76,24 @@ unsigned long Engine::get_gameobject_count() {
 	return Engine::m_gameobjects.size();
 }
 
+void Engine::register_scene(const std::string & name, void (*scenecreator)()) {
+	Engine::m_scenes[name] = scenecreator;
+}
+
+void Engine::load_scene(const std::string & name) {
+	ASSERT(m_scenes.count(name), "No scene named " + name);
+	m_scene_to_load = name;
+	m_about_to_load_scene = true;
+}
 /* Private routines*/
 
-void Engine::update() {
-	double ms_p_frame = 0.016666667*1000;
+void Engine::main_loop() {
+	double ms_p_frame = 0.016666667 * 1000;
 	while (Engine::m_running) {
+		if (m_about_to_load_scene) {
+			m_about_to_load_scene = false;
+			replace_scene();
+		}
 		Engine::put_gameobjects_into_world();
 		Engine::remove_gameobject_from_world();
 		InputManager::read_inputs();
@@ -92,6 +101,18 @@ void Engine::update() {
 		Engine::render_gameobjects();
 	}
 }
+
+void Engine::replace_scene() {
+	/*
+		Removes all gameobjects
+		calls the sceneloader function
+		this function will add the
+		intial gameobjects to the engine.
+	*/
+	clear_all_gameobjects();
+	m_scenes[m_scene_to_load]();
+}
+
 
 void Engine::update_gameobjects() {
 	for (auto i = Engine::m_gameobjects.begin(); i != Engine::m_gameobjects.end(); ++i) {
@@ -131,6 +152,16 @@ void Engine::sort_gameobjects() {
 	}
 }
 
+void Engine::clear_all_gameobjects(){
+	m_gameobjects.clear();
+	std::queue<std::pair<GAMEOBJECT_ID,
+	    std::shared_ptr<GameObject>>>().swap(m_gameobjects_to_add);
+	std::queue<GAMEOBJECT_ID>().swap(m_gameobjects_to_remove);
+	auto g = Engine::add_gameobject<GameObject>();
+	g.lock()->add_component<Debug_CloseGameComponent>();
+
+}
+
 void Engine::put_gameobjects_into_world() {
 	std::vector<std::shared_ptr<GameObject>> added_items(Engine::m_gameobjects_to_add.size());
 	GAMEOBJECT_ID added_items_counter = 0;
@@ -148,6 +179,11 @@ void Engine::remove_gameobject_from_world() {
 	while (!Engine::m_gameobjects_to_remove.empty()) {
 		GAMEOBJECT_ID id = Engine::m_gameobjects_to_remove.front();
 		if (Engine::m_gameobjects.count(id)) {
+			for (auto comp = Engine::m_gameobjects[id]->get_all_components().begin();
+				comp != Engine::m_gameobjects[id]->get_all_components().end();
+				++comp){
+				(*comp)->teardown(*Engine::m_gameobjects[id]);
+			}
 			Engine::m_gameobjects_to_remove.pop();
 			Engine::m_gameobjects.erase(id);
 		}
@@ -156,11 +192,12 @@ void Engine::remove_gameobject_from_world() {
 
 
 void Engine::run_setups(std::vector<std::shared_ptr<GameObject>> & gameobjects) {
+	
 	for (auto go = gameobjects.begin(); go != gameobjects.end(); ++go) {
 		for (auto comp = (*go)->get_all_components().begin();
 		        comp != (*go)->get_all_components().end();
 		        ++comp) {
-			(*comp)->setup(**go);
+			(*comp)->setup(*go);
 		}
 	}
 }

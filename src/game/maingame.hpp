@@ -4,6 +4,7 @@
 #include "../engine/resourcemanager.hpp"
 #include "../engine/basics/vector2d.hpp"
 #include "resource_paths.hpp"
+#include "scenes/mainscene.hpp"
 class MainGame {
 public:
 	static void initialize();

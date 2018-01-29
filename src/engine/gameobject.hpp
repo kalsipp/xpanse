@@ -59,12 +59,4 @@ std::weak_ptr<component_type> GameObject::get_component() {
 	}else{
 		return std::weak_ptr<component_type>();
 	}
-	// for (auto i = m_components.begin(); i != m_components.end(); ++i) {
-	// 	auto downcastedPtr = std::dynamic_pointer_cast<component_type>(*i);
-	// 	if (downcastedPtr)
-	// 	{
-	// 		return downcastedPtr;
-	// 	}
-	// }
-	// return std::weak_ptr<component_type>();
 }

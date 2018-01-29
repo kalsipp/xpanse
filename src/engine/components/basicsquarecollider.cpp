@@ -1,5 +1,8 @@
 #include "basicsquarecollider.hpp"
 
+BasicSquareCollider::BasicSquareCollider(const Vector2D & size): m_size(size) 
+{}
+
 void BasicSquareCollider::update(GameObject & user) {
 
 }

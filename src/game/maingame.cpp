@@ -9,8 +9,10 @@ void MainGame::initialize() {
 		ResourceManager::set_source_file("game.zip");
 		GraphicsManager::load_texture(DEFAULT_SPRITE);
 		GraphicsManager::load_texture(PLAYER_SPRITE_SHEET);
-	}
-	
+
+		Engine::register_scene("mainscene", myscene);
+		Engine::load_scene("mainscene");
+	}	
 }
 void MainGame::mainloop() {
 	ASSERT(MainGame::m_initialized, "You need to initialize MainGame");
